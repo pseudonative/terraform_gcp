@@ -12,12 +12,13 @@ resource "google_project_service" "enabled_service" {
   project  = var.project-id
   service  = each.key
   provisioner "local-exec" {
+    command = "sleep 60"
+  }
+  provisioner "local-exec" {
     when    = destroy
     command = "sleep 15"
   }
-  provisioner "local-exec" {
-    command = "sleep 60"
-  }
+  
 }
 resource "google_sourcerepo_repository" "repo" {
   depends_on = [
