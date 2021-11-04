@@ -8,7 +8,7 @@ locals {
 }
 
 resource "google_project_service" "enabled_service" {
-  for_each = toset(local.service)
+  for_each = toset(local.services)
   project  = var.project-id
   service  = each.key
   provisioner "local-exec" {
