@@ -35,7 +35,7 @@ resource "google_cloudbuild_trigger" "trigger" {
   ]
   trigger_template {
     branch_name = "master"
-    repo_name   = google_resourcerepo_repository.repo.name
+    repo_name   = google_sourcerepo_repository.repo.name
   }
   build {
     step {
