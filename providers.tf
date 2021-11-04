@@ -1,4 +1,4 @@
 provider "google" {
-  project = var.project-id
+  project = var.project_id
   region  = var.region
 }
