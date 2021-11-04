@@ -29,7 +29,7 @@ resource "google_sourcerepo_repository" "repo" {
   name = "${var.namespace}-repo"
 }
 
-resource "google_cloud_build_trigger" "trigger" {
+resource "google_cloudbuild_trigger" "trigger" {
   depends_on = [
     google_project_service.enabled_service["cloudbuild.googleapis.com"]
   ]
