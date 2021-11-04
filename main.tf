@@ -8,6 +8,7 @@ locals {
 }
 
 resource "google_project_service" "enabled_service" {
+  disable_on_destroy = true
   for_each = toset(local.services)
   project  = var.project-id
   service  = each.key
