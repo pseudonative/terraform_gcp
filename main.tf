@@ -27,7 +27,7 @@ resource "google_sourcerepo_repository" "repo" {
 }
 
 locals {
-  image = "gcr.io/${var.project_id}/${var.namespace}"
+  image = "gcr.io/${var.project-id}/${var.namespace}"
   steps = [
     {
       name = "gcr.io/cloud-builders/go"
