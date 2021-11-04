@@ -19,6 +19,7 @@ resource "google_project_service" "enabled_service" {
     when = destroy
     command = "sleep 15"    
   }
+  disable_dependent_services = true
 }
 
 resource "google_sourcerepo_repository" "repo" {
