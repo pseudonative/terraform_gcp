@@ -1,3 +1,4 @@
+# Use the gcloud VM to init, plan, apply
 locals {
   services=[
       "sourcerepo.googleapis.com",
